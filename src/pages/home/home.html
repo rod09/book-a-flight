@@ -1,27 +1,27 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Fastest
+      Agent Sugestion
     </ion-title>
   </ion-navbar>
   <ion-toolbar color="primary">
-    <ion-title>$505.67</ion-title>
+    <ion-title>{{ travelPrice | currency:US:true }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <ion-list *ngFor="let flight of flights">
     <ion-item>
       <ion-grid>
         <ion-row>
           <ion-col width-33 text-center>
-            <ion-icon name="ios-analytics"></ion-icon>
+            <ion-icon [name]="flight.company_icon_name"></ion-icon>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col width-33 text-center><strong color="light">AMS</strong></ion-col>
-          <ion-col width-33 text-center><strong color="light">2h 35m</strong></ion-col>
-          <ion-col width-33 text-center><strong color="light">IBZ</strong></ion-col>
+          <ion-col width-33 text-center><strong color="light">{{ flight.from }}</strong></ion-col>
+          <ion-col width-33 text-center><strong color="light">{{ flight.time_left }}</strong></ion-col>
+          <ion-col width-33 text-center><strong color="light">{{ flight.to }}</strong></ion-col>
         </ion-row>
         <ion-row>
           <ion-col width-33 text-center></ion-col>
@@ -29,9 +29,9 @@
           <ion-col width-33 text-center></ion-col>
         </ion-row>
         <ion-row>
-          <ion-col width-33 text-center><strong color="dark" class="hour-text">14:05</strong></ion-col>
-          <ion-col width-33 text-center><strong color="light">0 stops</strong></ion-col>
-          <ion-col width-33 text-center><strong color="dark" class="hour-text">16:40</strong></ion-col>
+          <ion-col width-33 text-center><strong color="dark" class="hour-text">{{ flight.departure }}</strong></ion-col>
+          <ion-col width-33 text-center><strong color="light">{{ flight.stops }} stops</strong></ion-col>
+          <ion-col width-33 text-center><strong color="dark" class="hour-text">{{ flight.arrival }}</strong></ion-col>
         </ion-row>
       </ion-grid>
     </ion-item>

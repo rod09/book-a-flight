@@ -22,11 +22,12 @@
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
+  primary:    #3178ad,
   secondary:  #32db64,
   danger:     #f53d3d,
-  light:      lightgray,
-  dark:       #222
+  light:      #949ea9,
+  dark:       #222,
+  title:      #88c6f4
 );
 
 
@@ -40,7 +41,6 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
 
 
 

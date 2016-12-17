@@ -1,15 +1,21 @@
 page-home {
-    ion-icon[name='ios-analytics'] {
-        font-size: 42px;
-        color: yellow;
+    .ion-ios-analytics {
+        font-size: 3.2em;
+        color: #ffd200;
+    }
+    
+    .ion-md-analytics {
+        font-size: 3.2em;
+        color: #00ba62;
     }
 
+
     ion-icon[name='ios-arrow-round-forward-outline'] {
-        font-size: 52px;
+        font-size: 3.2em;
         color: lightgray;
     }
 
     .hour-text {
-        font-size: 32px;
+        font-size: 1.3em;
     }
 }
