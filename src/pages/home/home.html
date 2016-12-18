@@ -5,35 +5,35 @@
     </ion-title>
   </ion-navbar>
   <ion-toolbar color="primary">
-    <ion-title>{{ travelPrice | currency:US:true }}</ion-title>
+    <ion-title>{{ travelPrice | currency:'USD':true }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list *ngFor="let flight of flights">
-    <ion-item>
-      <ion-grid>
-        <ion-row>
-          <ion-col width-33 text-center>
-            <ion-icon [name]="flight.company_icon_name"></ion-icon>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col width-33 text-center><strong color="light">{{ flight.from }}</strong></ion-col>
-          <ion-col width-33 text-center><strong color="light">{{ flight.time_left }}</strong></ion-col>
-          <ion-col width-33 text-center><strong color="light">{{ flight.to }}</strong></ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col width-33 text-center></ion-col>
-          <ion-col width-33 text-center><ion-icon name="ios-arrow-round-forward-outline"></ion-icon></ion-col>
-          <ion-col width-33 text-center></ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col width-33 text-center><strong color="dark" class="hour-text">{{ flight.departure }}</strong></ion-col>
-          <ion-col width-33 text-center><strong color="light">{{ flight.stops }} stops</strong></ion-col>
-          <ion-col width-33 text-center><strong color="dark" class="hour-text">{{ flight.arrival }}</strong></ion-col>
-        </ion-row>
-      </ion-grid>
+  <ion-list>
+    <ion-item *ngFor="let flight of flights">
+      <ion-row>
+        <ion-col width-33 text-center>
+          <ion-icon [name]="flight.company_icon_name"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-33 text-center><strong color="light">{{ flight.from }}</strong></ion-col>
+        <ion-col width-33 text-center><strong color="light">{{ flight.time_left }}</strong></ion-col>
+        <ion-col width-33 text-center><strong color="light">{{ flight.to }}</strong></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-33 text-center></ion-col>
+        <ion-col width-33 text-center>
+          <ion-icon name="ios-arrow-round-forward-outline"></ion-icon>
+        </ion-col>
+        <ion-col width-33 text-center></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-33 text-center><strong color="dark" class="hour-text">{{ flight.departure }}</strong></ion-col>
+        <ion-col width-33 text-center><strong color="light">{{ flight.stops }} stops</strong></ion-col>
+        <ion-col width-33 text-center><strong color="dark" class="hour-text">{{ flight.arrival }}</strong></ion-col>
+      </ion-row>
     </ion-item>
   </ion-list>
 </ion-content>
