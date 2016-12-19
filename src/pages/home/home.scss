@@ -1,18 +1,30 @@
 page-home {
-    .ion-ios-analytics {
+    ion-icon {
         font-size: 3.2em;
+    }
+    .ion-ios-analytics {
         color: #ffd200;
     }
     
     .ion-md-analytics {
-        font-size: 3.2em;
         color: #00ba62;
     }
 
+    .ion-ios-at {
+        color: #009688;
+    }
+
+    .ion-ios-american-football {
+        color: #673ab7;
+    }
+
+    .ion-ios-bonfire {
+        color: #e91e63;
+    }
 
     ion-icon[name='ios-arrow-round-forward-outline'] {
         font-size: 3.2em;
-        color: lightgray;
+        color: #949ea9;
     }
 
     .hour-text {
