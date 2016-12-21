@@ -1,4 +1,3 @@
-# book-a-flight
 # Creating ionic 2 apps from dribble ui/ux designs
 
 
